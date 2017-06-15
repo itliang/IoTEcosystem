@@ -1,0 +1,247 @@
+Name: Li Liang
+Lab: Mobile Product Lab
+Project: Tizen IoT
+Period: 2016.12. 20 ~ 2017.12.20
+Reason: 继续使用更换过的HP8000主机内硬盘，由于老的硬盘安装在新主机上没有办法重新启动系统，新的系统装在了新PC的硬盘上，需要继续使用原来硬盘里面的数据。
+
+Samsung Connect ??
+1.提交防火墙申请
+2.注册IP地址 http://mobilerndhub.sec.samsung.net/portal/git/iptables/list/
+
+2.配置Git
+$ git config --global user.name yourSingleID
+$ git config --global user.email yourSingleID@samsung.com
+
+3.生成rsa public key，用于访问git/gerrit服务器
+$ cd ~   
+$ ssh-keygen -t rsa -C yourSingleID@samsung.com
+$ ls .ssh
+确认.ssh/id_rsa.pub存在，改key即为你的 rsa public key。
+
+4.注册 SSH public key
+进入http://slp-info.sec.samsung.net/gerrit/#/settings/ssh-keys
+将.ssh/id_rsa.pub中的内容复制进去，点击Add
+
+5.下载代码
+执行git init
+后执行git clone 代码路径（详见gerrit）
+
+
+git clone ssh://liang0612.li@165.213.202.130:29418/SamsungConnect_Plugin
+git clone -b devel/iot/master ssh://lianghui.zou@165.213.149.219:29418/magnolia/framework/iot/spider/
+
+scp -p -P 29418 liang0612.li@165.213.202.130:hooks/commit-msg .git/hooks/
+git remote add gerrithost ssh://liang0612.li@165.213.202.130:29418/SamsungConnect_Plugin
+
+merge
+
+git status
+git add .
+git config --global commit.template ~/.commit-msg_template.txt
+sudo git commit -a
+git push gerrithost HEAD:refs/for/master
+
+yngjin.jeon, junho4810.lee, hs1120.oh
+
+http://165.213.202.130/gerrit/#/c/147232/
+
+Title : Add AirConditioner and Refrigerator main view files. 
+[Model]
+[BinType] AP 
+[Customer] Open 
+[Issue#] N/A 
+[Request] New Feature 
+[Occurrence Version] N/A 
+[Problem] 
+[Cause & Measure] 
+[Checking Method] 
+[Team] WearableService 
+[Developer] Liang Li
+[Solution company] Samsung 
+[Change Type] New Feature
+
+peixia.dang
+lianghui.zou
+juan0801.liu
+minqiang.chi
+guowei.wang
+xiaofu.liang
+jk0218.zhang
+
+wang.gu
+qingqiu.li
+lianghui.zou
+
+http://splm.sec.samsung.net/portal/com/shared/main.do
+
+
+Refrigerator(Family Hub)             		1    	Zhang Jinkang,
+Kimchi Refrigerator: 				2	Yang hehua, Zhao xiaojuan 
+Air Conditioner(FAC)     			2	Zhang Jinkang,  Wang guowei， 
+Air Conditioner(RAC)				1	Li Liang
+Oven                     			2	Zou lianghui，Liu juan
+Range                     			2	Liang xiaofu，Dang peixia
+Bixby web plugin 				2	Li Qingqiu,Gu Wang
+
+
+Air purify                     				3    Yang hehua, 			Su zhidao, Zhang junwei
+
+
+APP 测试方法
+1. 需要两台Android 手机外还需要一个公共的AP，其中一台（手机A）安装 Samsung Connect,并且已添加Samsung Account。 另外一台(手机B)安装virtual device APP。
+2. 手机B中，打开Tethering, 并且名称必须设置为Robot Vacuum OCF， 访问密码为 1111122222,然后打开virtual device, 选择要模拟的设备类型
+3. 手机A中，打开Samsung Connect, 选择右下角的add device，按照提示步骤完成easy setup的过程。
+4. 成功后手机B中，会提示关闭Tethering，并且打开WiFi。
+建议手机A和B 一开始先连下同一个AP。保存密码。这样Easy Setup成功的概率会比较高。
+5. 编译大家的Plugin, 把他拷贝到安装samsung connect的手机的/sdcard/plugings/apks目录下面
+6. 在/sdcard/plugins/下面添加rvc.plugin文件。其中内容如下：
+{
+  "id": "10050",
+  "name": "RVC",
+  "version": "0.0.1",
+  "type": "ui",
+  "url": "apks/rvc_plugin.apk",
+  "modelID": "RVC",
+  "firmwareVer": "000000001",
+  "deviceType": "robotcleaner",
+  "deviceSubType": "robotcleaner",
+  "hostInfo": {
+    "os": "Android",
+    "osVersion": "5.0.1",
+    "platformVersion": "0.0",
+    "abi": "armeabi"
+  }
+}
+
+其中要注意里面的url必须和你apks目录下面保存的名字一致。
+7. 一切成功以后，在Samsung Connect的主页面上会有连接的设备图标，点击进入以后就可以对你的设备进行操作了。
+
+Refrigerator OCF
+Floor A/C OCF
+Room A/C OCF
+System A/C OCF
+Air Purifier OCF
+Oven OCF
+Range OCF
+
+Error:Failed to find Build Tools revision 25.0.0
+<a href="install.build.tools">Install Build Tools 25.0.0 and sync project</a>
+
+Git & Gerrit
+ - 14
+http://mobilerndhub.sec.samsung.net/portal/git/iptables/list/
+
+Smart Device System SW
+	Tizen RT adaptor for low resource target
+	Kernel/driver dev.
+IoT Native/Cloud FWK 
+	China localized IoT protocol/cloud integration
+	IoT data collection FWK
+Application & Service
+	IoT Hub apps & service
+	All-in-one Samsung Connect service
+	Convergence service based on Iotivity
+	
+	
+[Executor manager quick guide]
+
+1. Prepare proper android device
+Usally engineering binary needed, if you can not preapre eng device, 
+you should build each module manually
+without "android:sharedUserId="android.uid.system"" value.
+(TODO: Check android eng binary and device for Nanjing)
+
+2. Install mock device app (simulator)
+
+3. Install executor package
+
+4. See sample codes such as message app and note app
+
+5. Create and copy your json files for testing
+(example)
+executor_service_info.json
+SamsungConnect_rule_1.json
+/sdcard/RuleExecutorManager/executor_service_info.json
+/sdcard/RuleExecutorManager/JsonFiles_Parsed_Excel_Data/SamsungConnect_rule_1.json
+/sdcard/RuleExecutorManager/JsonFiles_Parsed_Excel_Data/*.json
+(TODO: Share all rule db files)
+(TODO: Share all rule documents)
+
+6. Put executor client aar library into your project
+
+7. Create application instance and set listener and launch default activity
+(Not needed) 
+
+8. Set listener for your activity
+ON-RESUME();
+
+9. Handle each status in listener code
+
+10. Do test
+
+
+1.samsungtheme里面的部分代码可能要上传到SamsungConnect_Plugin/NativePlugin/common/SamsungTheme.
+2.UI方面：options界面里的item，speed ，quiet，Long 没有相应的界面。
+                 About界面里的item，Manual，help check，self check,smart care没有相应的界面。
+3.weather 城市的获取，及城市天气的获取。
+4.Virtual device上的命令和UI对不起来。
+5.从Virtual device获得的mode和UI不一致，无法根据mode来disable相应的一些item。
+6.UI上的很多内容不知从哪获取，比如outdoor，air purity,humidity,vent,windfree,purity,schedule,good sleep,my wind,voice selection,lighting,auto clean,filter.
+7.Energy monitor prevent 这个需要check，看看当前从virtual device上获取的数值对不对。
+8.bixby目前只加了4个state，要根据具体的cmd再补充。
+9.可能部分GUI要调整，这个要一个个界面对了。
+
+
+	
+	/*
+	This slide is about Tizen voice Framework, The project background is that while I am developing SVoice Application, Firstly I directly integrate with voice engine in the APP. though it can work in some case
+    but this solution has big defects.
+	Firstly, with the changes of engine library, APP should change accordingly.
+	Secondly, from the view of open Tizen platform, it can't provide voice engine open APIs for developers.
+	So, we setup the project goal, one is to 	
+	will include the vlingo lib and call it, But at that time, The engine always change. So the application must change according to it. Later we have an new requirement, Svoice should adapted to Samsung SVoice engine. we should totally 
+	separate app and voice engine, so we applied Client-Server architecture, and plug-in pattern, You can see the diagram in the left of this page, we divided the app into four modules, TTS & STT client library and TTS &STT service.
+	In the service, We applied plug-in pattern, according to the engine setting, we dynamically launch the engine library. 
+	*/
+
+P170117-05032,
+P170117-04760,
+P170117-02543,
+P170117-02512,
+P170117-02494,
+P170117-02445,
+P170116-06452,
+P170116-06351,
+P170116-05925,
+P170116-05767,
+P170116-05497,
+P170113-05985,
+
+G935S : https://android.qb.sec.samsung.net/build/12450964
+G935L : https://android.qb.sec.samsung.net/build/12450970
+G930F : https://android.qb.sec.samsung.net/build/12451003
+G935F : https://android.qb.sec.samsung.net/build/12450965
+G935A : https://android.qb.sec.samsung.net/build/12456545
+
+adb install -r -d samsungconnect-1.0.0-83.apk
+
+项目名
+	- Samsung Connect （11人， APP）
+开发内容
+	- 本地和web版三星家电控制应用插件开发
+	
+
+
+-   目的：中国本地用户通过Samsung Connect控制中国厂商设备并且可以设备间联动
+
+-   具体内容： Samsung IoT cloud 与本地IoT Cloud的连接， 
+				本地IoT cloud的plugin开发
+
+-   期待效果：解决了Samsung Connect只支持三星家电的问题
+
+-   后续计划或目标：未来galaxy 手机可以控制除了三星家电以外的本地IoT设备
+
+
+
+
+

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<manifest xmlns="http://tizen.org/ns/packages" api-version="3.0" package="com.samsung.tizen.pluginmgmt" version="1.0.0">
+    <profile name="mobile"/>
+    <service-application appid="com.samsung.tizen.pluginmgmt" exec="pluginplatform" multiple="false" nodisplay="true" taskmanage="false" type="capp">
+        <label>pluginplatform</label>
+        <icon>pluginplatform.png</icon>
+    </service-application>
+</manifest>
