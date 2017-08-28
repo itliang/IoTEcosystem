@@ -1,0 +1,129 @@
+#%RAML 0.8
+title: IoTivity Robot
+version: v1.0.0-20170826
+#traits to define common properties for method(get/put/post...)
+traits:
+	- interface :
+		#Detailed information about any query parameters needed by this method. Mutually exclusive with queryString.
+		queryParameters:
+			if: 
+				enum: ["oic.if.a", "oic.if.baseline"]
+			
+/IoTivityRobotMovementResURI:
+	description: |
+		This resource specifies movement of Robot
+	displayName: RobotMovement
+	#is A list of the traits to apply to this method.
+	is : ['interface']
+	
+	get:
+		description: |
+			Retrieves the current state information of robot.
+		
+		responses:
+			200:
+				body:
+					application/json:
+						schema: |
+						{
+							"id": "http://iotivity.top/schemas/x.top.iotivity.robot.movement.json#",
+							"$schema": "http://json-schema.org/draft-04/schema#",
+							"description" : "Copyright (c) 2017 IoTivity Top. All rights reserved.",
+							"title": "IoTivity Robot Movement",
+							"definitions": {
+								"x.top.iotivity.robot.movement": {
+									"type": "object",
+									"properties": {
+										"x.top.iotivity.robot.behavior": {
+											"type": "string",
+											"description": "Forward, Left, Right, Stop",
+											"default": "Stop"
+										}
+									}
+								}
+							},
+							"type": "object",
+							"allOf": [
+								{"$ref": "oic.core.json#/definitions/oic.core"},
+								{"$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"},
+								{"$ref": "#/definitions/x.com.samsung.da.movement"}
+							],
+							"required": ["x.com.samsung.da.behavior"]
+						}
+						example: |
+						{
+							"id": "unique_example_id"
+						}
+	post:
+		description: |
+			Send movement to robot
+		
+		body:
+			application/json:
+				schema:	|
+					{
+                        "id": "http://iotivity.top/schemas/x.top.iotivity.robot.movement.json#",
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "description" : "Copyright (c) 2017 IoTivity Top. All rights reserved.",
+                        "title": "IoTivity Robot Movement",
+                        "definitions": {
+                            "x.top.iotivity.robot.movement": {
+                                "type": "object",
+                                "properties": {
+                                    "x.top.iotivity.robot.behavior": {
+                                        "type": "string",
+                                        "description": "Forward, Left, Right, Stop",
+                                        "default": "Stop"
+                                    }
+                                }
+                            }
+                        },
+                        "type": "object",
+                        "allOf": [
+                            {"$ref": "oic.core.json#/definitions/oic.core"},
+                            {"$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"},
+                            {"$ref": "#/definitions/x.com.samsung.da.movement"}
+                        ],
+                        "required": ["x.top.iotivity.robot.behavior"]
+                    }
+
+                    example: |
+                        {
+                            "id": "unique_example_id",
+                        }
+			
+		responses:
+			200:
+				body:
+					application/json:
+					    schema:	|
+                            {
+                                "id": "http://iotivity.top/schemas/x.top.iotivity.robot.movement.json#",
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "description" : "Copyright (c) 2017 IoTivity Top. All rights reserved.",
+                                "title": "IoTivity Robot Movement",
+                                "definitions": {
+                                    "x.top.iotivity.robot.movement": {
+                                        "type": "object",
+                                        "properties": {
+                                            "x.top.iotivity.robot.behavior": {
+                                                "type": "string",
+                                                "description": "Forward, Left, Right, Stop",
+                                                "default": "Stop"
+                                            }
+                                        }
+                                    }
+                                },
+                                "type": "object",
+                                "allOf": [
+                                    {"$ref": "oic.core.json#/definitions/oic.core"},
+                                    {"$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"},
+                                    {"$ref": "#/definitions/x.com.samsung.da.movement"}
+                                ],
+                                "required": ["x.top.iotivity.robot.behavior"]
+                            }
+
+                            example: |
+                                {
+                                    "id": "unique_example_id",
+                                }

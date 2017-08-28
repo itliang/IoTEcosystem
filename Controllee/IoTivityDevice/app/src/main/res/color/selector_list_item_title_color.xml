@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/colorListItemMainTextDisabled" android:state_enabled="false" />
+    <item android:color="@color/colorListItemMainTextSelected" android:state_enabled="true" android:state_selected="true" />
+    <item android:color="@color/colorListItemMainTextNormal" android:state_enabled="true" android:state_pressed="false" />
+    <item android:color="@color/colorListItemMainTextPressed" android:state_enabled="true" android:state_pressed="true" />
+</selector>

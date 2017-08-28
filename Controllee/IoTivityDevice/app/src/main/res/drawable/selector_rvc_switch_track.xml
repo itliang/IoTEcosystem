@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_checked="false" android:state_enabled="false">
+        <layer-list>
+            <item android:left="5dp" android:right="5dp">
+                <nine-patch android:dither="true" android:src="@drawable/btn_switch_track_off_dim" />
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="true" android:state_enabled="false">
+        <layer-list>
+            <item android:left="5dp" android:right="5dp">
+                <nine-patch android:dither="true" android:src="@drawable/btn_switch_track_on_dim" />
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_checked="false">
+        <layer-list>
+            <item android:left="5dp" android:right="5dp">
+                <nine-patch android:dither="true" android:src="@drawable/btn_switch_track_off" />
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item android:left="5dp" android:right="5dp">
+                <nine-patch android:dither="true" android:src="@drawable/btn_switch_track_on" />
+            </item>
+        </layer-list>
+    </item>
+</selector>

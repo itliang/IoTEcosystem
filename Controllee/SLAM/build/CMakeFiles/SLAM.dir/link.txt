@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -fPIC -v -fvisibility=hidden -fvisibility-inlines-hidden -Wno-literal-suffix -O -g    -pthread CMakeFiles/SLAM.dir/src/slam.cpp.o  -o SLAM -rdynamic -lglib-2.0 -Wl,-rpath,:::::::::::::::::::: 

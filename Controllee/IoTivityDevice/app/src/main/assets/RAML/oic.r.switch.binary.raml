@@ -1,0 +1,127 @@
+#%RAML 0.8
+title: OCFBinarySwitch
+version: v1.1.0-20160519
+traits:
+ - interface :
+     queryParameters: 
+       if:
+         enum: ["oic.if.a", "oic.if.baseline"]
+
+/BinarySwitchResURI:
+  description: |
+    This resource describes a binary switch (on/off).
+    The value is a boolean.
+    A value of 'true' means that the switch is on.
+    A value of 'false' means that the switch is off.
+    
+  displayName: Binary switch
+   
+  is : ['interface']
+  get:
+    responses :
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "id": "http://openinterconnect.org/iotdatamodels/schemas/oic.r.switch.binary.json#",
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "description" : "Copyright (c) 2016 Open Connectivity Foundation, Inc. All rights reserved.",
+                "title": "Binary Switch",
+                "definitions": {
+                  "oic.r.switch.binary": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": "boolean",
+                        "description": "Status of the switch"
+                      }
+                    }
+                  }
+                },
+                "type": "object",
+                "allOf": [
+                  {"$ref": "oic.core.json#/definitions/oic.core"},
+                  {"$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"},
+                  {"$ref": "#/definitions/oic.r.switch.binary"}
+                ],
+                "required": [ "value" ]
+              }
+
+            example: |
+              {
+                "rt":     ["oic.r.switch.binary"],
+                "id":     "unique_example_id",
+                "value":  false
+              }
+
+  post:
+    body:
+      application/json:
+        schema: |
+          {
+            "id": "http://openinterconnect.org/iotdatamodels/schemas/oic.r.switch.binary.json#",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "description" : "Copyright (c) 2016 Open Connectivity Foundation, Inc. All rights reserved.",
+            "title": "Binary Switch",
+            "definitions": {
+              "oic.r.switch.binary": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "type": "boolean",
+                    "description": "Status of the switch"
+                  }
+                }
+              }
+            },
+            "type": "object",
+            "allOf": [
+              {"$ref": "oic.core.json#/definitions/oic.core"},
+              {"$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"},
+              {"$ref": "#/definitions/oic.r.switch.binary"}
+            ],
+            "required": [ "value" ]
+          }
+
+        example: |
+          {
+            "id":    "unique_example_id",
+            "value": true
+          }
+
+    responses :
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "id": "http://openinterconnect.org/iotdatamodels/schemas/oic.r.switch.binary.json#",
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "description" : "Copyright (c) 2016 Open Connectivity Foundation, Inc. All rights reserved.",
+                "title": "Binary Switch",
+                "definitions": {
+                  "oic.r.switch.binary": {
+                    "type": "object",
+                    "properties": {
+                      "value": {
+                        "type": "boolean",
+                        "description": "Status of the switch"
+                      }
+                    }
+                  }
+                },
+                "type": "object",
+                "allOf": [
+                  {"$ref": "oic.core.json#/definitions/oic.core"},
+                  {"$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"},
+                  {"$ref": "#/definitions/oic.r.switch.binary"}
+                ],
+                "required": [ "value" ]
+              }
+
+            example: |
+              {
+                "id":    "unique_example_id",
+                "value": true
+              }

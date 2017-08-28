@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="270dp"
+    android:layout_height="270dp"
+    android:background="@drawable/rvc_control_btn_bg"
+    android:foreground="@drawable/fu_rvc_control_btn_l_bg">
+    <RelativeLayout
+        android:id="@+id/control_button_fore_bg"
+        android:layout_width="270dp"
+        android:layout_height="270dp"
+        android:layout_centerInParent="true"
+        />
+    <Button
+        android:id="@+id/left_command_button"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/rvc_control_btn_ic_left"
+        android:foregroundGravity="center"
+        android:foregroundTint="@color/selector_rvc_control_btn_color"
+        android:foregroundTintMode="src_in" />
+    <Button
+        android:id="@+id/right_command_button"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/rvc_control_btn_ic_right"
+        android:foregroundGravity="center"
+        android:foregroundTint="@color/selector_rvc_control_btn_color"
+        android:foregroundTintMode="src_in" />
+    <Button
+        android:id="@+id/up_command_button"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:foreground="@drawable/rvc_control_btn_ic_up"
+        android:foregroundGravity="center"
+        android:foregroundTint="@color/selector_rvc_control_btn_color"
+        android:foregroundTintMode="src_in" />
+    <Button
+        android:id="@+id/down_command_button"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/spot"
+        android:textColor="@color/selector_rvc_control_btn_color"
+        android:textSize="18sp" />
+    <ToggleButton
+        android:id="@+id/center_command_button"
+        style="@style/DeviceBaseTheme.Button.Circle"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerInParent="true"
+        android:drawableTop="@drawable/selector_rvc_control_center_icon_btn"
+        android:fontFamily="sans-serif-condensed"
+        android:gravity="bottom|center_horizontal"
+        android:paddingBottom="17dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="22dp"
+        android:textOff="@string/auto"
+        android:textOn="@string/pause"
+        android:textSize="13sp"
+        android:textColor="@color/rvc_color_normal_text"
+        android:textStyle="bold"
+        android:translationZ="10dp" />
+</RelativeLayout>

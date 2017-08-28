@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rvc_color_normal_icon_bg">#3695dd</color>
+    <color name="rvc_color_disable_icon_bg">#4d3695dd</color>
+
+    <color name="rvc_color_normal_icon_image">#ffffff</color>
+    <color name="rvc_color_disable_icon_image">#4dffffff</color>
+
+    <color name="rvc_color_normal_bg">#ffffff</color>
+    <color name="rvc_color_selected_bg">#3695dd</color>
+    <color name="rvc_color_disable_bg">#4dffffff</color>
+
+    <color name="rvc_color_normal_text">#3695dd</color>
+    <color name="rvc_color_selected_text">#ffffff</color>
+    <color name="rvc_color_disable_text">#4d3695dd</color>
+
+    <color name="rvc_color_guide_text">#252525</color>
+
+    <color name="rvc_color_normal_page_indicator">#b0b0b0</color>
+    <color name="rvc_color_selected_page_indicator">#3695dd</color>
+
+    <color name="rvc_color_history_normal_bg">#ffffff</color>
+    <color name="rvc_color_history_selected_bg">#EDEDED</color>
+    <color name="rvc_color_history_dropshadow">#3F000000</color>
+    <color name="rvc_color_history_date">#2F2F2F</color>
+    <color name="rvc_color_history_text">#838383</color>
+    <color name="rvc_color_history_room_name">#BD2F2F2F</color>
+
+    <color name="rvc_color_floorplan_normal_bg">#4BFFFFFF</color>
+    <color name="rvc_color_floorplan_normal_stroke">#A1A1A1</color>
+    <color name="rvc_color_floorplan_press_bg">#4C3695DD</color>
+    <color name="rvc_color_floorplan_press_stroke">#3695DD</color>
+
+    <color name="rvc_color_bottom_bar_normal_bg">#F0F0F0</color>
+    <color name="rvc_color_bottom_bar_pressed_bg">#3695dd</color>
+    <color name="rvc_color_bottom_bar_disable_bg">#4DF0F0F0</color>
+
+    <!-- Default Common Color -->
+    <color name="colorAccent">#3695dd</color>
+    <color name="colorPrimary">#51b0d3</color>
+    <color name="colorSecondary">#3695dd</color>
+    <color name="colorPrimaryDark">#499ebd</color>
+    <color name="colorColorControlActivate">#56c0e5</color>
+    <color name="colorColorControlHighlight">#56c0e5</color>
+    <color name="colorWhite">#fafafa</color>
+    <color name="colorBlack">#252525</color>
+    <color name="colorGray">#969696</color>
+    <color name="colorDarkGray">#676767</color>
+    <color name="colorLightGray">#26252525</color>
+
+    <color name="colorTextPrimary">#3695dd</color>
+    <color name="colorTextSecondary">#969696</color>
+
+    <color name="colorActionBarBackground">#fafafa</color>
+    <color name="colorActionBarTitle">#484848</color>
+    <color name="colorActionBarSubTitle">#80484848</color>
+    <color name="colorActionBarMenuText">#3695dd</color>
+
+    <color name="colorTabBarTextSelected">#3695dd</color>
+    <color name="colorTabBarTextNormal">#969696</color>
+
+    <color name="colorCircleButtonBGNormal">#ffffff</color>
+    <color name="colorCircleButtonBGPressed">#e5e5e5</color>
+    <color name="colorCircleButtonBGSelected">#ffffff</color>
+
+    <color name="colorButtonBGNormal">#ffffff</color>
+    <color name="colorButtonBGHover">#4D3695dd</color>
+    <color name="colorButtonBGFocused">#4D3695dd</color>
+    <color name="colorButtonBGPressed">#1A000000</color>
+    <color name="colorButtonBGSelected">#3695dd</color>
+    <color name="colorButtonBGDisabled">#1A000000</color>
+
+    <color name="colorButtonTextNormal">#3695dd</color>
+    <color name="colorButtonTextHover">#3695dd</color>
+    <color name="colorButtonTextFocused">#3695dd</color>
+    <color name="colorButtonTextPressed">#3695dd</color>
+    <color name="colorButtonTextSelected">#ffffff</color>
+    <color name="colorButtonTextDisabled">#26252525</color>
+
+    <color name="colorDialogLayerBackground">#33000000</color>
+    <color name="colorDialogBackground">#f7f7f7</color>
+    <color name="colorDialogTitle">#252525</color>
+    <color name="colorDialogMessage">#8A000000</color>
+    <color name="colorDialogButtonText">#3695dd</color>
+
+    <color name="colorListViewDivider">#dfdfdf</color>
+    <color name="colorListItemMainTextNormal">#252525</color>
+    <color name="colorListItemMainTextPressed">#252525</color>
+    <color name="colorListItemMainTextSelected">#3695dd</color>
+    <color name="colorListItemMainTextDisabled">#33252525</color>
+    <color name="colorListItemSubTextNormal">#3695dd</color>
+    <color name="colorListItemSubTextPressed">#3695dd</color>
+    <color name="colorListItemSubTextSelected">#3695dd</color>
+    <color name="colorListItemSubTextDisabled">#33252525</color>
+    <color name="colorListSectionDivider">#3695dd</color>
+    <color name="colorListScrollbar">#4D000000</color>
+
+    <color name="colorToastText">#ffffff</color>
+    <color name="colorToastBackground">#CC000000</color>
+    <color name="colorTabDivider">#3695dd</color>
+
+    <color name="colorTabTitleNormal">#969696</color>
+    <color name="colorTabTitlePressed">#3695dd</color>
+    <color name="colorTabTitleSelected">#3695dd</color>
+    <color name="colorTabTitleDisabled">#66969696</color>
+</resources>

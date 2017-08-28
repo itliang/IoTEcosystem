@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="DeviceBaseTheme" parent="Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/colorWhite</item>
+
+        <item name="buttonStyle">@style/DeviceBaseTheme.Button</item>
+        <item name="radioButtonStyle">@style/DeviceBaseTheme.RadioButton</item>
+        <item name="checkboxStyle">@style/DeviceBaseTheme.CheckBox</item>
+        <item name="actionBarStyle">@style/DeviceBaseTheme.ActionBar</item>
+        <item name="actionBarSize">@dimen/dimenActionBarSize</item>
+        <item name="toolbarStyle">@style/DeviceBaseTheme.ActionBar.ToolBar</item>
+        <item name="switchStyle">@style/DeviceBaseTheme.Switch</item>
+
+        <item name="android:actionBarStyle">@style/DeviceBaseTheme.ActionBar</item>
+        <item name="android:actionBarSize">@dimen/dimenActionBarSize</item>
+        <item name="android:toolbarStyle">@style/DeviceBaseTheme.ActionBar.ToolBar</item>
+
+        <item name="android:buttonStyle">@style/DeviceBaseTheme.Button</item>
+        <item name="android:radioButtonStyle">@style/DeviceBaseTheme.RadioButton</item>
+        <item name="android:checkboxStyle">@style/DeviceBaseTheme.CheckBox</item>
+        <item name="android:tabWidgetStyle">@style/DeviceBaseTheme.TabWidget</item>
+        <item name="android:switchStyle">@style/DeviceBaseTheme.Switch</item>
+
+        <item name="android:colorPrimary">@color/colorPrimary</item>
+        <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="android:colorControlActivated">@color/colorColorControlActivate</item>
+        <item name="android:colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextSecondary</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:foreground">@android:color/transparent</item>
+        <item name="colorControlHighlight">@color/colorColorControlHighlight</item>
+        <item name="android:colorControlHighlight">@color/colorColorControlHighlight</item>
+    </style>
+
+    <style name="DeviceBaseTheme.Translucent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+    <style name="DeviceBaseTheme.Translucent.NoTitleBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="DeviceBaseTheme.Translucent.NoTitleBar.Fullscreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

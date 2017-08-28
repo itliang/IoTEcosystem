@@ -1,0 +1,62 @@
+// Device : Robot Cleaner
+{
+	"deviceName": "[robot] IoTivity",
+	"deviceType": "oic.d.robot",
+	"collectionInfo": {
+		"rt": "x.com.iotivity.devcol",
+		"uri": "/device",
+		"ocif":["oic.if.baseline", "oic.if.ll", "oic.if.b"]
+	},
+	"resourceTypes": [
+	{
+		"rt": "oic.r.switch.binary",
+		"uri": "/power",
+		"n": "Power Switch",
+		"v": false
+    },
+    {
+		"rt": "x.top.iotivity.robot.movement",
+		"uri": "/movement/vs",
+		"n": "Movement",
+		"v": true
+    },
+	{
+		"rt": "x.top.iotivity.robot.mode",
+		"uri": "/mode/vs",
+		"n": "Mode",
+		"v": true
+    },
+    {
+		"rt": "oic.r.energy.battery",
+		"uri": "/energy/battery",
+		"n": "Battery",
+		"v": false
+    },
+	{
+		"rt": "oic.r.mode",
+		"uri": "/mode",
+		"n": "Mode",
+		"v":false
+	},
+    {
+		"rt": "x.com.samsung.da.actions",
+		"uri": "/actions/vs",
+		"n": "Schedule",
+		"v": true
+    }
+	],
+	"platformInfo": {
+		"pi": "1234",//this value is mandatory for registering platform
+		"mnmn": "IoTivity",
+		"mnml": "http://www.iotivity.top",
+		"mnmo": "0x0600",
+		"mndt": "",
+		"mnpv": "",
+		"mnos": "",
+		"mnhw": "A20_ROBOT_VER_2.1",
+		"mnfv": "Device_0208",
+		"mnsl": "",
+		"st": "",
+		"vid": "IoT-ROBOT-NORMAL-000001"
+	}
+}

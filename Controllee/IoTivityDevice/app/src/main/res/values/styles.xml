@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ActionBar styles -->
+    <style name="DeviceBaseTheme.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
+        <item name="titleTextAppearance">@style/DeviceBaseTheme.ActionBar.TitleText</item>
+        <item name="subtitleTextAppearance">@style/DeviceBaseTheme.ActionBar.SubTitleText</item>
+        <item name="actionMenuTextAppearance">@style/DeviceBaseTheme.ActionBar.ActionMenuText</item>
+        <item name="colorAccent">@color/colorTabBarTextSelected</item>
+        <item name="colorPrimary">@color/colorActionBarBackground</item>
+        <item name="actionMenuTextColor">@color/colorActionBarMenuText</item>
+        <item name="background">@color/colorActionBarBackground</item>
+        <item name="android:textColorPrimary">@color/colorTextPrimary</item>
+        <item name="android:textColorSecondary">@color/colorTextPrimary</item>
+    </style>
+
+
+    <style name="DeviceBaseTheme.ActionBar.ActionMenuText">
+        <item name="android:textSize">15sp</item>
+        <item name="background">@android:color/transparent</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DeviceBaseTheme.ActionBar.TitleText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/colorActionBarTitle</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="DeviceBaseTheme.ActionBar.SubTitleText">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorActionBarSubTitle</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="DeviceBaseTheme.ActionBar.ToolBar" parent="Base.Widget.AppCompat.Toolbar">
+        <item name="titleTextAppearance">@style/DeviceBaseTheme.ActionBar.TitleText</item>
+        <item name="subtitleTextAppearance">@style/DeviceBaseTheme.ActionBar.SubTitleText</item>
+        <item name="actionMenuTextAppearance">@style/DeviceBaseTheme.ActionBar.ActionMenuText</item>
+        <item name="colorAccent">@color/colorTabBarTextSelected</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/colorAccent</item>
+        <item name="android:textColorSecondary">@color/colorAccent</item>
+        <item name="actionMenuTextColor">@color/colorActionBarMenuText</item>
+        <item name="navigationIcon">@drawable/rvc_ic_title_back</item>
+
+        <item name="contentInsetStartWithNavigation">0dp</item>
+        <item name="contentInsetStart">0dp</item>
+        <item name="android:contentInsetStartWithNavigation">0dp</item>
+        <item name="android:contentInsetStart">0dp</item>
+    </style>
+
+    <style name="DeviceBaseTheme.ActionBar.ToolBar.Button.NavigationIcon" parent="android:Widget">
+        <item name="android:minWidth">24dp</item>
+        <item name="android:maxWidth">24dp</item>
+        <item name="android:scaleType">center</item>
+    </style>
+
+    <style name="DeviceBaseTheme.TabWidget" parent="@android:style/Widget.Material.Light.TabWidget">
+        <item name="android:textAppearance">@style/DeviceBaseTheme.TabWidget.TitleText</item>
+    </style>
+
+    <style name="DeviceBaseTheme.TabWidget.TitleText" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/selector_tabbar_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Button styles -->
+    <style name="DeviceBaseTheme.Button" parent="@android:style/Widget.Material.Light.Button">
+        <item name="android:background">@drawable/selector_round_button_style</item>
+        <item name="android:textColor">@color/selector_button_text_color</item>
+    </style>
+
+    <style name="DeviceBaseTheme.Button.Circle">
+        <item name="android:background">@drawable/selector_circle_button_style</item>
+        <item name="android:textColor">@color/selector_button_text_color</item>
+    </style>
+
+    <style name="DeviceBaseTheme.RadioButton" parent="@android:style/Widget.Material.Light.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/selector_radio_button_style</item>
+    </style>
+
+    <style name="DeviceBaseTheme.CheckBox" parent="@android:style/Widget.Material.Light.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/selector_check_button_style</item>
+    </style>
+
+    <!-- Switch styles -->
+    <style name="DeviceBaseTheme.Switch" parent="@android:style/Widget.Material.Light.CompoundButton.Switch">
+        <item name="android:thumb">@drawable/selector_rvc_switch_thumb</item>
+        <item name="android:track">@drawable/selector_rvc_switch_track</item>
+    </style>
+</resources>

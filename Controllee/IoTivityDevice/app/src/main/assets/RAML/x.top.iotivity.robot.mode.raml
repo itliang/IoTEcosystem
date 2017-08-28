@@ -1,0 +1,64 @@
+#%RAML 0.8
+title: IoTivity Robot Mode
+version: v1.0.0-20170828
+traits:
+ - interface :
+     queryParameters:
+       if:
+         enum: ["oic.if.s", "oic.if.a", "oic.if.baseline"]
+
+/IoTivityRobotModeResURI:
+  description: |
+    Generic resource to represent a list of supported modes and a selected mode.
+
+  displayName: IoTivity Robot Mode
+
+  is : ['interface']
+  get:
+    description: |
+      Retrieve the supported modes and the current selected mode.
+
+    responses :
+      200:
+        body:
+          application/json:
+            schema: |
+              {
+                "id": "http://iotivity.top/schemas/x.top.iotivity.mode#",
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "description" : "Copyright (c) 2017 Iotivity Top. All rights reserved.",
+                "title": "IoTivity Robot Mode",
+                "definitions": {
+                  "x.top.iotivity.robot.mode": {
+                    "type": "object",
+                    "properties": {
+                      "x.top.iotivity.robot.mode.supportedModes": {
+                        "type": "array",
+                        "description": "ReadOnly, List of the supported modes.",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "x.top.iotivity.robot.mode.modes": {
+                        "type": "array",
+                        "description": "List of the modes.",
+                        "items": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "type": "object",
+                "allOf": [
+                  {"$ref": "oic.core.json#/definitions/oic.core"},
+                  {"$ref": "oic.baseResource.json#/definitions/oic.r.baseresource"},
+                  {"$ref": "#/definitions/x.top.iotivity.mode"}
+                ],
+                 "required": ["x.top.iotivity.robot.mode"]
+              }
+
+            example: |
+              {
+                 "id":     "unique_example_id"
+              }

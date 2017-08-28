@@ -1,0 +1,4 @@
+We can refer to https://oneiota.org/revisions/1393 for common device spec definition
+For example: oic.r.switch.binary, oic.r.energy.battery
+
+2. 

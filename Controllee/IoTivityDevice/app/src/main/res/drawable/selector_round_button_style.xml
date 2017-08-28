@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="19dp" />
+            <solid android:color="@color/colorButtonBGDisabled" />
+        </shape>
+    </item>
+    <item android:state_enabled="true" android:state_selected="true">
+        <shape>
+            <corners android:radius="19dp" />
+            <solid android:color="@color/colorButtonBGSelected" />
+        </shape>
+    </item>
+    <item android:state_enabled="true" android:state_pressed="false">
+        <shape>
+            <corners android:radius="19dp" />
+            <solid android:color="@color/colorButtonBGNormal" />
+        </shape>
+    </item>
+    <item  android:state_enabled="true" android:state_pressed="true">
+        <shape>
+            <corners android:radius="19dp" />
+            <solid android:color="@color/colorButtonBGPressed" />
+        </shape>
+    </item>
+    <item android:state_enabled="true"  android:state_hovered="true">
+        <shape>
+            <corners android:radius="19dp" />
+            <solid android:color="@color/colorButtonBGHover" />
+        </shape>
+    </item>
+    <item android:state_enabled="true" android:state_focused="true">
+        <shape>
+            <corners android:radius="19dp" />
+            <solid android:color="@color/colorButtonBGFocused" />
+        </shape>
+    </item>
+</selector>
